@@ -1,5 +1,5 @@
-# Voting_DApp
-Decentralized Decisions software.
-# Run Steps
-1. In the *frontend* directory, run *npm install*.
-2. Run *npm start* to run the server on your local machine.
+Final DApp for voting for the Choice Coin DAO
+
+#Run Steps
+1. Run NPM Install to get all the required node packages.
+2. Run NPM Start to run the server on your local instance.
