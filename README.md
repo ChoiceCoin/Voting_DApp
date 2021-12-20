@@ -1,4 +1,4 @@
-Final DApp for voting for the Choice Coin DAO
+Decentralized Decisions DApp for voting for the Choice Coin DAO
 
 #Run Steps
 1. Run NPM Install to get all the required node packages.
