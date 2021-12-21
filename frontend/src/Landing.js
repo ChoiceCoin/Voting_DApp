@@ -14,7 +14,7 @@ const Landing = () => {
       Choice Coin DAO: Bringing Decentralized Governance to the Algorand Blockchain
     </p>
     <p className="suby">
-      Choice Coin is an Algorand Standard Asset (ASA) that powers the Choice Coin DAO, a Decentralized Autonomous Organization built on the Algorand Blockchain. The Choice Coin DAO aims to make decentralized voting a reality through allocations to open-source software development and community awareness.
+      Choice is an Algorand Standard Asset (ASA) that powers the Choice Coin DAO, a Decentralized Autonomous Organization built on the Algorand Blockchain. The Choice Coin DAO aims to make decentralized voting a reality through allocations to open-source software development and community awareness.
       <br />
       <br />
       Decentralized Decisions allows users to vote on proposals within the Choice Coin DAO using their Choice tokens. The options with the most Choice allocated to it will be the ones that are implemented.
