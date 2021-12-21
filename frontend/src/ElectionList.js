@@ -38,7 +38,6 @@ const ElectionList = () => {
   );
 
   const walletType = localStorage.getItem("wallet-type");
-
   const isThereAddress = localStorage.getItem("address");
 
   const election_data = [
@@ -57,7 +56,7 @@ const ElectionList = () => {
         },
       ],
       card_desc:
-        "Vote 0 is on the annual distribution of Choice Coin's Reserve Funds. Currently, the reserve address holds 750 Million Choice. This vote will decide whether distirbution will continue at an annual rate of 150 million per year for the next 5 years, or decrease to a rate of 75 million per year for the next 10 years.",
+        "Vote 0 is on the annual distribution of Choice Coin's Reserve address. Currently, the reserve address holds 750 Million Choice. This vote will decide whether distirbution will be a annual rate of 150 million Choice per year for the next 5 years, or a rate of 75 million Choice per year for the next 10 years.",
       choice_per_vote: 1,
       created_at: "2021-12-08T10:32:15.878473",
       description: "Lorem ipsum",
