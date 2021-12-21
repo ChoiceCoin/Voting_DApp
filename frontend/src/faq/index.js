@@ -22,11 +22,11 @@ const Faq = () => {
         },
         {
           que: "What is Choice Coin?",
-          ans: "Choice Coin is an open source governance platform on the Algorand blockchain",
+          ans: "Choice Coin is an open source governance platform on the Algorand blockchain.",
         },
         {
           que: "What is Algorand?",
-          ans: "Algorand is a blockchain-based cryptocurrency platform that aims to be secure, scalable, and decentralized. The Algorand platform supports smart contract functionality, and its consensus algorithm is based on proof-of-stake principles and a Byzantine Agreement protocol. Algorand's native cryptocurrency is called Algo.",
+          ans: "Algorand is a secure, scalable, and decentralized blockchain. The Algorand platform supports smart contract functionality, and its consensus algorithm is based on proof-of-stake principles and a Byzantine Agreement protocol. Algorand's native cryptocurrency is called Algo.",
         },
       ].map((item) => (
         <div className="collap_cov">
