@@ -13,16 +13,16 @@ const Faq = () => {
 
       {[
         {
-          que: "What is Choice Coin?",
-          ans: "Choice Coin is the governance token for the Choice Coin DAO. Holders of Choice Coin can vote on various issues within the Choice Coin DAO by committing their Choice Coin during Goverance.",
+          que: "What is Choice?",
+          ans: "Choice is the governance token for the Choice Coin DAO. Holders of Choice Coin can vote on various issues within the Choice Coin DAO by committing their Choice Coin during Goverance.",
         },
         {
           que: "What is the Choice Coin DAO?",
           ans: "The Choice Coin DAO is a Decentralized Autonomous Organization working to make decentralized voting a reality. The Choice Coin DAO hopes to bring voting to the Algorand Blockchain by allocating the Choice Coin asset to open-source software development, awareness campaigns, and more. Join the Choice Coin Discord to learn more.",
         },
         {
-          que: "Where can I buy Choice Coin?",
-          ans: "Choice Coin is currently available on TinyMan, an automatic market maker (AMM) on Algorand.",
+          que: "What is Choice Coin?",
+          ans: "Choice Coin is an open source governance platform on the Algorand blockchain",
         },
         {
           que: "What is Algorand?",
