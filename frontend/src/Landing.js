@@ -5,7 +5,12 @@ const Landing = () => {
   return (
     <div className="landing" id="landing">
       <ScrollTextLand
-        word={"Join our Discord Server to learn more and participate in our Open Source Rewards Programs!"}
+        word={
+          <a href="https://discord.gg/YNAbfB4WEy">
+            Join our Discord Server to learn more and participate in our Open
+            Source Rewards Programs!
+          </a>
+        }
       />
 
       <div className="land_cov">
