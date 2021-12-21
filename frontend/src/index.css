@@ -266,12 +266,15 @@ main {
 }
 .addrDisplay .green{
   background-color: rgb(53, 156, 224);
-  color: #1a1a1a;
+  color: white;
   text-align: center;
  font-weight: 300;
   display: flex;
   border-radius: 3px;
   transition: all 400ms ease-in-out;
+}
+.green{
+  color:white
 }
 
 /*  */

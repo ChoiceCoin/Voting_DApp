@@ -52,7 +52,7 @@ const TopNavigationBar = ({ darkTheme, NavLink }) => {
       "X-API-Key": "Xy8NsXxfJg2cQ2YQ4pax6aLrTcj55jZ9mbsNCM30 ",
     },
     "https://testnet-algorand.api.purestake.io/ps2",
-    ""
+    "",
   );
 
   const walletAddress = localStorage.getItem("address");
