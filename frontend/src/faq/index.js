@@ -21,8 +21,8 @@ const Faq = () => {
           ans: "The Choice Coin DAO is a Decentralized Autonomous Organization working to make decentralized voting a reality. The Choice Coin DAO hopes to bring voting to the Algorand Blockchain by allocating the Choice Coin asset to open-source software development, awareness campaigns, and more. Join the Choice Coin Discord to learn more.",
         },
         {
-          que: "What is Choice Coin?",
-          ans: "Choice Coin is an open source governance platform on the Algorand blockchain.",
+          que: "What is Decentralized Decisions?",
+          ans: "Decentralized Decisions is an open source governance platform on the Algorand blockchain.",
         },
         {
           que: "What is Algorand?",
