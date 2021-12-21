@@ -264,6 +264,15 @@ main {
   opacity: 0.7;
   white-space: nowrap;
 }
+.addrDisplay .green{
+  background-color: rgb(53, 156, 224);
+  color: #1a1a1a;
+  text-align: center;
+ font-weight: 300;
+  display: flex;
+  border-radius: 3px;
+  transition: all 400ms ease-in-out;
+}
 
 /*  */
 .connect_wallet_button {
