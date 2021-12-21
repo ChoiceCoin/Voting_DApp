@@ -123,9 +123,24 @@
   cursor: pointer;
   font-weight: 500;
   letter-spacing: 0.4px;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   margin-top: 20px;
+  word-wrap: break-word
+
+
 }
 .ask_que p {
   opacity: 0.8;
+  text-align: center;
+}
+.ask_q_sect a{
+  word-wrap: break-word
+}
+@media (min-width: 450px) {
+ .ask_que{ 
+
+  white-space: nowrap;
+
+ }
+  
 }
