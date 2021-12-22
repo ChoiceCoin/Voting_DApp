@@ -126,7 +126,7 @@ const ElectionList = () => {
         to: voteData.address,
         amount: amountToSend,
         assetIndex: ASSET_ID,
-        ...suggestedParams,
+        suggestedParams,
       });
 
       const signedTxn = await myAlgoWallet.signTransaction(txn.toByte());
