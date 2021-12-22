@@ -18,7 +18,7 @@ body {
 }
 * {
   box-sizing: border-box !important;
-  font-family: "Open sans";
+  font-family: "Open sans" !important;
 }
 
 #root {
@@ -26,30 +26,25 @@ body {
 }
 
 :root {
+  --wht: #fff;
+  --txt: #999;
   --list_h: 68px;
-  --list-border: 1px solid rgba(255, 255, 255, 8%);
-
+  --l1: #e6e6e635;
+  --white: #fdfdfd;
   --back-1: #363636;
   --back-2: #4a4a4a;
-
-  --white: #fdfdfd;
-  --wht: #fff;
+  --bord-dark: #666;
+  --txt-alt: #808080;
+  --txt-alt-2: #aaaa;
+  --sm-hd-height: 60px;
   --dark-800: #242424;
   --dark-800: #1a1a1a;
-  --txt: #999;
-  --txt-alt: #808080;
-  --txt-alt-2: #aaa;
-  --sm-hd-height: 60px;
-  --sm-hd-height-half: 60px;
   --sm-nav-height: 70px;
   --main-col: #2958ff;
+  --container-width: 550px;
+  --sm-hd-height-half: 60px;
   --main-col-inv: #ccf381;
-
-  /* --main-col: #31b7a3;
-  --main-col-inv: #ce485c; */
-  --bord-dark: #666;
-  /* --main-col: #0300e2; */
-  --l1: #e6e6e635;
+  --list-border: 1px solid rgba(255, 255, 255, 8%);
 }
 
 main {
@@ -264,18 +259,6 @@ main {
   opacity: 0.7;
   white-space: nowrap;
 }
-.addrDisplay .green{
-  background-color: rgb(53, 156, 224);
-  color: white;
-  text-align: center;
- font-weight: 300;
-  display: flex;
-  border-radius: 3px;
-  transition: all 400ms ease-in-out;
-}
-.green{
-  color:white
-}
 
 /*  */
 .connect_wallet_button {
@@ -378,30 +361,29 @@ main {
 
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   flex-direction: column;
 
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
 }
 .mn_sm_modal {
-  width: 100vw;
+  width: 350px;
+  max-width: 87vw;
   display: flex;
   color: var(--wht);
   font-size: 15px;
-  font-weight: 500;
   align-items: center;
   box-sizing: border-box;
   flex-direction: column;
-  padding-top: 50px;
-  padding-bottom: 20px;
-  background: var(--back-1);
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  overflow: hidden;
   border-top: 1px solid var(--border-default);
 }
 .mn_sm_modal_inn {
   width: 100%;
-  max-width: 90vw;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0px;
+  border: 1px solid var(--l1);
 }
 .mn_l1 {
   padding-bottom: 10px;
@@ -430,14 +412,18 @@ main {
 
 .mn_sm_modal .Marquee__Wrapper {
   margin: 0px !important;
-  opacity: 0.3;
   margin-top: 4px;
 }
 .mn_sm_modal .Marquee__TextGroup {
   animation-duration: 60s !important;
 }
 .mn_sm_modal .Marquee__Word {
-  font-size: 14px !important;
+  opacity: 0.4;
+  font-size: 12px;
+  font-weight: 400;
+  word-spacing: 4px;
+  padding: 20px 0px;
+  text-transform: uppercase;
 }
 
 /* Algo connect */
