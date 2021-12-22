@@ -293,29 +293,18 @@ const ElectionList = () => {
           )
         : false;
 
-      // if the address has no ASAs
       if (myAccountInfo.assets.length === 0) {
-        dispatch({
-          type: "alert_modal",
-          alertContent: "You need to optin to Choice Coin",
-        });
+        alert("You need to optin to Choice Coin");
         return;
       }
 
       if (!containsChoice) {
-        dispatch({
-          type: "alert_modal",
-          alertContent: "You need to optin to Choice Coin",
-        });
+        alert("You need to optin to Choice Coin");
         return;
       }
 
       if (voteData.amount > balance) {
-        dispatch({
-          type: "alert_modal",
-          alertContent:
-            "You do not have sufficient balance to make this transaction.",
-        });
+        alert("You do not have sufficient balance to make this transaction.");
         return;
       }
 
@@ -349,8 +338,6 @@ const ElectionList = () => {
       });
 
       console.log(decodedResult);
-
-      await algodClient.sendRawTransaction(decodedResult).do();
 
       // alert success
       dispatch({
