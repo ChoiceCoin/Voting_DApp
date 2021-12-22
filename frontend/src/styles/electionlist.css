@@ -13,7 +13,7 @@
 }
 
 .ptt_elt_inn {
-  width: 490px;
+  width: var(--container-width);
   max-width: 88vw;
 }
 .ptt_hd {
@@ -49,7 +49,7 @@
   display: flex;
   flex-direction: column;
   padding: calc(30px + var(--sm-hd-height)) 0px 30px;
-  padding: 0px 0px 30px;
+  padding: 0px 0px 60px;
 }
 
 @media screen and (max-width: 850px) {
@@ -59,7 +59,7 @@
 }
 
 .card_cont {
-  width: 490px;
+  width: var(--container-width);
   max-width: 88vw;
   min-height: 200px;
 

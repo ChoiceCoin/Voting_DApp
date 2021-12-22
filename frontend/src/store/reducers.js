@@ -3,7 +3,7 @@ import { combineReducers } from "redux";
 const status = (
   state = {
     darkTheme: localStorage.getItem("mode") === "light" ? false : true,
-    modalMenu: { openModal: false, modalType: "menu" },
+    alertModal: { openModal: false, modalContent: "" },
     electModal: { openElectModal: false, modalData: null },
     voteModal: { openModalVote: false, voteData: null },
     addressNum: 0,
@@ -21,35 +21,14 @@ const status = (
     case "dark_mode":
       return { ...state, darkTheme: true };
 
-    case "modal_menu":
-      return { ...state, modalMenu: { openModal: true, modalType: "menu" } };
-    case "modal_connect":
+    case "alert_modal":
       return {
         ...state,
-        modalMenu: { openModal: true, modalType: "connectWallet" },
+        alertModal: { openModal: true, modalContent: action.alertContent },
       };
-
-    case "modal_connect_vote":
-      return {
-        ...state,
-        voteModal: { openModalVote: true, voteData: action.voteData },
-      };
-    case "close_vote_modal":
-      return { ...state, voteModal: { openModalVote: false, voteData: null } };
 
     case "close_modal":
-      return { ...state, modalMenu: { openModal: false, modalType: "menu" } };
-
-    case "popupElection":
-      return {
-        ...state,
-        electModal: { openElectModal: true, modalData: action.payload },
-      };
-    case "closePopupElection":
-      return {
-        ...state,
-        electModal: { openElectModal: false, modalData: null },
-      };
+      return { ...state, alertModal: { openModal: false, modalContent: "" } };
 
     default:
       return state;

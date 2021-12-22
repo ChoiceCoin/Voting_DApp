@@ -31,7 +31,7 @@ const ElectionList = () => {
 
   const algodClient = new algosdk.Algodv2(
     {
-      "X-API-Key": "",
+      "X-API-Key": "Xy8NsXxfJg2cQ2YQ4pax6aLrTcj55jZ9mbsNCM30",
     },
     "https://testnet-algorand.api.purestake.io/ps2",
     ""
@@ -102,19 +102,27 @@ const ElectionList = () => {
 
       // if the address has no ASAs
       if (myAccountInfo.assets.length === 0) {
-        alert("You need to optin to Choice Coin");
-        dispatch({ type: "close_vote_modal" });
+        dispatch({
+          type: "alert_modal",
+          alertContent: "You need to optin to Choice Coin",
+        });
         return;
       }
 
       if (!containsChoice) {
-        alert("You need to optin to Choice Coin");
-        dispatch({ type: "close_vote_modal" });
+        dispatch({
+          type: "alert_modal",
+          alertContent: "You need to optin to Choice Coin",
+        });
         return;
       }
 
       if (voteData.amount > balance) {
-        alert("You do not have sufficient balance to make this transaction.");
+        dispatch({
+          type: "alert_modal",
+          alertContent:
+            "You do not have sufficient balance to make this transaction.",
+        });
         return;
       }
 
@@ -126,18 +134,32 @@ const ElectionList = () => {
         to: voteData.address,
         amount: amountToSend,
         assetIndex: ASSET_ID,
-        ...suggestedParams,
+        suggestedParams,
       });
 
       const signedTxn = await myAlgoWallet.signTransaction(txn.toByte());
       await algodClient.sendRawTransaction(signedTxn.blob).do();
 
       // alert success
-      alert("You have successfully placed your vote for this election");
-      window.location.reload();
+      dispatch({
+        type: "alert_modal",
+        alertContent:
+          "You have successfully placed your vote for this election",
+      });
+      setTimeout(() => window.location.reload(), 1500);
     } catch (error) {
-      alert("An error occured the during transaction process");
-      console.log(error);
+      if (error.message === "Can not open popup window - blocked") {
+        dispatch({
+          type: "alert_modal",
+          alertContent:
+            "Pop Up windows blocked by your browser. Enable pop ups to continue.",
+        });
+      } else {
+        dispatch({
+          type: "alert_modal",
+          alertContent: "An error occured the during transaction process",
+        });
+      }
     }
   };
 
@@ -180,19 +202,27 @@ const ElectionList = () => {
 
         // if the address has no ASAs
         if (myAccountInfo.assets.length === 0) {
-          alert("You need to optin to Choice Coin");
-          dispatch({ type: "close_vote_modal" });
+          dispatch({
+            type: "alert_modal",
+            alertContent: "You need to optin to Choice Coin",
+          });
           return;
         }
 
         if (!containsChoice) {
-          alert("You need to optin to Choice Coin");
-          dispatch({ type: "close_vote_modal" });
+          dispatch({
+            type: "alert_modal",
+            alertContent: "You need to optin to Choice Coin",
+          });
           return;
         }
 
         if (voteData.amount > balance) {
-          alert("You do not have sufficient balance to make this transaction.");
+          dispatch({
+            type: "alert_modal",
+            alertContent:
+              "You do not have sufficient balance to make this transaction.",
+          });
           return;
         }
 
@@ -216,16 +246,27 @@ const ElectionList = () => {
           )
           .do();
 
-        // close modal.
-        dispatch({ type: "close_vote_modal" });
-
         // alert success
-        alert("You have successfully placed your vote for this election");
-        window.location.reload();
+        dispatch({
+          type: "alert_modal",
+          alertContent:
+            "You have successfully placed your vote for this election",
+        });
+        setTimeout(() => window.location.reload(), 1500);
       }
     } catch (error) {
-      alert("An error occured the during transaction process");
-      console.log(error);
+      if (error.message === "Can not open popup window - blocked") {
+        dispatch({
+          type: "alert_modal",
+          alertContent:
+            "Pop Up windows blocked by your browser. Enable pop ups to continue.",
+        });
+      } else {
+        dispatch({
+          type: "alert_modal",
+          alertContent: "An error occured the during transaction process",
+        });
+      }
     }
   };
 
@@ -252,18 +293,29 @@ const ElectionList = () => {
           )
         : false;
 
+      // if the address has no ASAs
       if (myAccountInfo.assets.length === 0) {
-        alert("You need to optin to Choice Coin");
+        dispatch({
+          type: "alert_modal",
+          alertContent: "You need to optin to Choice Coin",
+        });
         return;
       }
 
       if (!containsChoice) {
-        alert("You need to optin to Choice Coin");
+        dispatch({
+          type: "alert_modal",
+          alertContent: "You need to optin to Choice Coin",
+        });
         return;
       }
 
       if (voteData.amount > balance) {
-        alert("You do not have sufficient balance to make this transaction.");
+        dispatch({
+          type: "alert_modal",
+          alertContent:
+            "You do not have sufficient balance to make this transaction.",
+        });
         return;
       }
 
@@ -300,17 +352,35 @@ const ElectionList = () => {
 
       await algodClient.sendRawTransaction(decodedResult).do();
 
-      alert("You have successfully placed your vote for this election");
-      window.location.reload();
+      // alert success
+      dispatch({
+        type: "alert_modal",
+        alertContent:
+          "You have successfully placed your vote for this election",
+      });
+      setTimeout(() => window.location.reload(), 1500);
     } catch (error) {
-      alert("An error occured the during transaction process");
-      console.log(error);
+      if (error.message === "Can not open popup window - blocked") {
+        dispatch({
+          type: "alert_modal",
+          alertContent:
+            "Pop Up windows blocked by your browser. Enable pop ups to continue.",
+        });
+      } else {
+        dispatch({
+          type: "alert_modal",
+          alertContent: "An error occured the during transaction process",
+        });
+      }
     }
   };
 
   const placeVote = (address, amount, election) => {
     if (!address) {
-      alert("Select an option to vote!!");
+      dispatch({
+        type: "alert_modal",
+        alertContent: "Select an option to vote!!",
+      });
       return;
     }
 
@@ -443,7 +513,7 @@ const ElectionList = () => {
                       <p>Amount to commit:</p>
                       <input
                         type="number"
-                        min="1"
+                        min="0"
                         placeholder="1"
                         className="amtToCommitInp"
                       />
