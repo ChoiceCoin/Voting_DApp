@@ -104,7 +104,7 @@ const ElectionList = () => {
       if (myAccountInfo.assets.length === 0) {
         dispatch({
           type: "alert_modal",
-          alertContent: "You need to optin to Choice Coin",
+          alertContent: "You need to opt-in to Choice Coin in your Algorand Wallet.",
         });
         return;
       }
@@ -112,7 +112,7 @@ const ElectionList = () => {
       if (!containsChoice) {
         dispatch({
           type: "alert_modal",
-          alertContent: "You need to optin to Choice Coin",
+          alertContent: "You need to opt-in to Choice Coin in your Algorand Wallet.",
         });
         return;
       }
@@ -144,7 +144,7 @@ const ElectionList = () => {
       dispatch({
         type: "alert_modal",
         alertContent:
-          "You have successfully placed your vote for this election",
+          "Your vote has been recorded.",
       });
       setTimeout(() => window.location.reload(), 1500);
     } catch (error) {
@@ -204,7 +204,7 @@ const ElectionList = () => {
         if (myAccountInfo.assets.length === 0) {
           dispatch({
             type: "alert_modal",
-            alertContent: "You need to optin to Choice Coin",
+            alertContent: "You need to opt-in to Choice Coin in your Algorand Wallet.",
           });
           return;
         }
@@ -212,7 +212,7 @@ const ElectionList = () => {
         if (!containsChoice) {
           dispatch({
             type: "alert_modal",
-            alertContent: "You need to optin to Choice Coin",
+            alertContent: "You need to opt-in to Choice Coin in your Algorand Wallet.",
           });
           return;
         }
@@ -250,7 +250,7 @@ const ElectionList = () => {
         dispatch({
           type: "alert_modal",
           alertContent:
-            "You have successfully placed your vote for this election",
+            "Your vote has been recorded.",
         });
         setTimeout(() => window.location.reload(), 1500);
       }
@@ -294,12 +294,12 @@ const ElectionList = () => {
         : false;
 
       if (myAccountInfo.assets.length === 0) {
-        alert("You need to optin to Choice Coin");
+        alert("You need to opt-in to Choice Coin in your Algorand Wallet.");
         return;
       }
 
       if (!containsChoice) {
-        alert("You need to optin to Choice Coin");
+        alert("You need to opt-in to Choice Coin in your Algorand Wallet.");
         return;
       }
 
@@ -343,7 +343,7 @@ const ElectionList = () => {
       dispatch({
         type: "alert_modal",
         alertContent:
-          "You have successfully placed your vote for this election",
+          "Your vote has been recorded.",
       });
       setTimeout(() => window.location.reload(), 1500);
     } catch (error) {
