@@ -7,6 +7,7 @@ import MyAlgoConnect from "@randlabs/myalgo-connect";
 import { useWindowSize } from "@react-hook/window-size";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import GetCommittedAmount from "../GetCommittedAmount";
+import corect from './correct.png';
 
  
 import WalletConnect from "@walletconnect/client";
@@ -227,7 +228,9 @@ const TopNavigationBar = ({ darkTheme, NavLink }) => {
                     <CopyToClipboard text={balance[addressNum]?.address}>
                       <div className="addressTxt">
                         <p>{balance[addressNum]?.address}</p>
-                        <i className="uil uil-copy"></i>
+                        {copyToClipBoard ? (<img style={{width:'11px'}}
+                          src={corect} alt="check"/>) : (<i onClick={() => handyCopyToClipBoard()} className="uil uil-copy"></i>)}
+                       
                       </div>
                     </CopyToClipboard>
                   </div>

@@ -17,4 +17,4 @@
 
 ## live demo
 
-![visuals](https://github.com/Samuellyworld/Voting_DApp/tree/main/frontend/public/live-demo.gif)
+![visuals](https://github.com/Samuellyworld/Voting_DApp/blob/voting-dapp/frontend/public/live-demo.gif)
