@@ -17,7 +17,8 @@ const ElectionList = () => {
 
   const [address1, setAddress1] = useState(0);
   const [address2, setAddress2] = useState(0);
-
+  
+// eslint-disable-next-line
   const { isLoading, error, data } = useQuery("elections", () =>
     axios.get(`${URL}/results/${ELECTION_ID}`).then((response) => {
       if (response?.data?.data) {

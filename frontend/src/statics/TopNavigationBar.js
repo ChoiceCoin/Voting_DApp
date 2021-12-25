@@ -1,3 +1,4 @@
+
 import algosdk from "algosdk";
 import { ASSET_ID } from "../constants";
 import { useDispatch, useSelector } from "react-redux";
@@ -7,6 +8,7 @@ import { useWindowSize } from "@react-hook/window-size";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import GetCommittedAmount from "../GetCommittedAmount";
 
+ 
 import WalletConnect from "@walletconnect/client";
 import QRCodeModal from "algorand-walletconnect-qrcode-modal";
 
@@ -25,6 +27,16 @@ const TopNavigationBar = ({ darkTheme, NavLink }) => {
     window.location.reload();
     console.log("data");
   };
+
+  const [copyToClipBoard , setCopyToClipBoard] = useState(null)
+
+  const handyCopyToClipBoard = () => {
+    setCopyToClipBoard(true)
+    setTimeout(() => {
+      setCopyToClipBoard(false)
+
+    }, 500);
+  }
 
   const setMode = () => {
     if (!darkTheme) {
@@ -147,6 +159,8 @@ const TopNavigationBar = ({ darkTheme, NavLink }) => {
     });
   };
 
+  const address = localStorage.getItem("address") || localStorage.getItem("addresses") || localStorage.getItem("wallet-type");
+
   const algoSignerConnect = async () => {
     try {
       if (typeof window.AlgoSigner === "undefined") {
@@ -219,13 +233,18 @@ const TopNavigationBar = ({ darkTheme, NavLink }) => {
                   </div>
                 </div>
 
-                <div className="dropDownConnect_items">
+                <div className={`dropDownConnect_items ${
+                  copyToClipBoard ? "green" : null
+                }`}>
                   {balance?.map((item, index) => {
                     return (
                       <div
                         key={index}
-                        className="dropDownConnect_item"
+                        className={`dropDownConnect_item ${
+                          copyToClipBoard ? "green" : null
+                        }`}
                         onClick={() => {
+                          handyCopyToClipBoard()
                           dispatch({
                             type: "setAlgoAddress",
                             addressIndex: index,
@@ -233,9 +252,14 @@ const TopNavigationBar = ({ darkTheme, NavLink }) => {
                           });
                         }}
                       >
-                        <p className="dropDownConnect_item_txt">
-                          {item.address}
+                      <CopyToClipboard text={balance[addressNum]?.address}>
+                        <p className={`dropDownConnect_item ${
+                          copyToClipBoard ? "green" : null
+                        }`}>
+                        {copyToClipBoard ? "Wallet Address Copied!" : `${item.address.substring(0, 17)}...`}
                         </p>
+                      </CopyToClipboard>
+                      
                       </div>
                     );
                   })}
@@ -324,7 +348,7 @@ const TopNavigationBar = ({ darkTheme, NavLink }) => {
           {!!walletAddress && <GetCommittedAmount />} Choice
         </p>
 
-        {width > 850 && (
+        {width > 850 ? (
           <ul className="listNavBig">
             <li>
               <NavLink
@@ -386,12 +410,16 @@ const TopNavigationBar = ({ darkTheme, NavLink }) => {
               )}
               de
             </li>
-            <li onClick={LogOut}>Sign Out</li>
+            <li className="disconnect" style={{color: 'red', }} onClick={LogOut}>{address ? "Disconnect" : null}</li>
+          </ul>
+        ) : (
+          <ul className="listNavBig">
+           <li className="disconnect" style={{color: 'red', }} onClick={LogOut}>{address ? "Disconnect" : null}</li>
           </ul>
         )}
       </div>
     </header>
-  );
+  ) ;
 };
 
 export default TopNavigationBar;
