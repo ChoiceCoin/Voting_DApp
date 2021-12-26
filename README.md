@@ -1,6 +1,6 @@
 # Decentralized Decisions DApp
 
-The Decentralized Decisions software allows for votes to be held on issues for the Choice Coin DAO, enabling a new form of direct and decentralized democratic decision making mechanism. The software leverages the Algorand blockchain to provide a new, scalable, and secure voting technology.
+The Decentralized Decisions software allows for votes to be held on issues for the Choice Coin DAO, enabling a new form of direct and decentralized democratic decision making. The software leverages the Algorand blockchain to provide a new, scalable, and secure voting technology.
 
 Research Paper on Decentralized Decisions: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3913316
 
