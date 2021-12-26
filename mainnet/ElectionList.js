@@ -1,5 +1,5 @@
 //Replace the "ElectionList.js" file with this in order to convert to MainNet
-//Make sure to replace the blank strings with actual addresses before 
+//Make sure to replace the blank strings with actual addresses before running
 import $ from "jquery";
 import axios from "axios";
 import algosdk from "algosdk";
