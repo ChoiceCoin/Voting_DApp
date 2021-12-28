@@ -9,8 +9,8 @@ import json
 import urllib3
 
 choice_id  = 297995609
-voter_1_address = 
-voter_1_mnemonic = 
+voter_1_address = ""
+voter_1_mnemonic = ""
 voter_1_key = mnemonic.to_private_key(voter_1_mnemonic)
 
 def choice_trade(sender, key, receiver, amount, index,comment):
