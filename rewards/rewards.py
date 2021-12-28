@@ -47,14 +47,14 @@ def fetch_addresses():
 
 def give_rewards():
 	with open('data.json', 'r') as json_file:
-					data = json.load(json_file)
-					transaction_data = data['transactions']
-					for transaction in transaction_data:
-						amount = transaction["asset-transfer-transaction"]["amount"]
-						amount = int(amount)
-						amount = amount + amount * 0.12 #Rewards rate hardcoded
-						address = transaction['sender']
-						id = transaction['id']
-						choice_trade(voter_1_address,voter_1_key,address,amount,choice_id,"Rewards!" + id)
+		data = json.load(json_file)
+		transaction_data = data['transactions']
+		for transaction in transaction_data:
+			amount = transaction["asset-transfer-transaction"]["amount"]
+			amount = int(amount)
+			amount = amount + amount * 0.12 #Rewards rate hardcoded
+			address = transaction['sender']
+			id = transaction['id']
+			choice_trade(voter_1_address,voter_1_key,address,amount,choice_id,"Rewards!" + id)
 # fetch_addresses()
 # give_rewards()
