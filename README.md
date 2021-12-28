@@ -2,6 +2,9 @@
 
 The Decentralized Decisions software allows for votes to be held on issues for the Choice Coin DAO, enabling a new form of direct and decentralized democratic decision making. The software leverages the Algorand blockchain to provide a new, scalable, and secure voting technology.
 
+Credit to @prettyirrelevant and @Alphatron for coding this infrastructure.
+Credit to @FionnaChan for her contributions to the design.
+
 Research Paper on Decentralized Decisions: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3913316
 
 # Run Steps
