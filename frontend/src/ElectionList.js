@@ -32,10 +32,9 @@ const ElectionList = () => {
   const darkTheme = useSelector((state) => state.status.darkTheme);
 
   const algodClient = new algosdk.Algodv2(
-  {
-    "X-API-Key": "5iDNC5wssQ2e2SWgaY1XH2FOnlQZG2v28JPUkD1L",
-  },
-  "https://mainnet-algorand.api.purestake.io/ps2",
+    ""
+  ,
+  "https://node.algoexplorerapi.io/v2",
   ""
 );
 
