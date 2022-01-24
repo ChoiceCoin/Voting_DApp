@@ -1,3 +1,5 @@
+//Replace the "ElectionList.js" file with this in order to convert to MainNet
+//Make sure to replace the blank strings with actual addresses before
 import $ from "jquery";
 import axios from "axios";
 import algosdk from "algosdk";
@@ -30,12 +32,12 @@ const ElectionList = () => {
   const darkTheme = useSelector((state) => state.status.darkTheme);
 
   const algodClient = new algosdk.Algodv2(
-    {
-      "X-API-Key": "",
-    },
-    "https://testnet-algorand.api.purestake.io/ps2",
-    ""
-  );
+  {
+    "X-API-Key": "5iDNC5wssQ2e2SWgaY1XH2FOnlQZG2v28JPUkD1L",
+  },
+  "https://mainnet-algorand.api.purestake.io/ps2",
+  ""
+);
 
   const walletType = localStorage.getItem("wallet-type");
   const isThereAddress = localStorage.getItem("address");
@@ -44,19 +46,19 @@ const ElectionList = () => {
     {
       candidates: [
         {
-          address: "DQ2NPLGQ3CV3QAPMS7KHIRUNUF2ZSTYRT5SZGDCPLB7VPC5OSSLCI5H7DM",
+          address: "JADVKUYQ72Z3LNDNQ3VFTXGAG6PPPQWN3QPI6CQTF3G4DVNP3TWJAI5UPI",
           image: "",
-          name: "75 million Choice  dispensed each year for the next 10 years",
+          name: "Option 1: The Choice Coin DAO will donate 15,000.00 Choice to Chess in Slums and Beyond Compass. The Choice Coin DAO will donate 25,000.00 Choice to Future Hopes International and Fearless Drive Foundation.",
         },
 
         {
-          address: "6P6D5KQH5VIXEJGW6LXPUMEZ77XNLHQXB6GMW4CBDBN2VJ4CFZ7HCIKUBM",
+          address: "M2VNOIOSE4KQ25XXFP3EQHUAQWINOEKY6HURCYUO2I6OJUQH3DAAZLGSPY",
           image: "",
-          name: "150 million Choice dispensed each year for the next 5 years",
+          name: "Option 2: The Choice Coin DAO will donate 25,000.00 Choice to Chess in Slums and Beyond Compass. The Choice Coin DAO will donate 15,000.00 Choice to Future Hopes International and Fearless Drive Foundation.",
         },
       ],
       card_desc:
-        "Vote 0 is on the annual distribution of Choice Coin's Reserve address. Currently, the reserve address holds 750 Million Choice. This vote will decide whether distirbution will be a annual rate of 150 million Choice per year for the next 5 years, or a rate of 75 million Choice per year for the next 10 years.",
+        "This Issue addresses Choice Charities, an initiative focused on charitable contributions from the DAO. This Issue has two options.",
       choice_per_vote: 1,
       created_at: "2021-12-08T10:32:15.878473",
       description: "Lorem ipsum",
@@ -64,7 +66,7 @@ const ElectionList = () => {
       is_started: true,
       process_image: "https://i.postimg.cc/90XSyrjH/choice.png",
       slug: "is-choice-coin-the-best-b0c7db",
-      title: "Reserve Address Distribution",
+      title: "Choice Charities",
       wallet: {
         address: "NX4T2FTIGNPVPSMEXJFMMKD46O4HRCPN25BDHOUW2SWXANZPQBZEDYKDVE",
       },
@@ -172,10 +174,10 @@ const ElectionList = () => {
         );
       } else {
         await window.AlgoSigner.connect({
-          ledger: "TestNet",
+          ledger: "MainNet",
         });
         const accounts = await window.AlgoSigner.accounts({
-          ledger: "TestNet",
+          ledger: "MainNet",
         });
 
         const address = !!isThereAddress ? isThereAddress : accounts[0].address;
@@ -338,7 +340,7 @@ const ElectionList = () => {
       });
 
       console.log(decodedResult);
-
+      await algodClient.sendRawTransaction(decodedResult).do();
       // alert success
       dispatch({
         type: "alert_modal",
@@ -356,7 +358,7 @@ const ElectionList = () => {
       } else {
         dispatch({
           type: "alert_modal",
-          alertContent: "An error occured the during transaction process",
+          alertContent: "An error occured during the transaction process",
         });
       }
     }
@@ -385,7 +387,7 @@ const ElectionList = () => {
       <div className="ptt_elt">
         <div className="ptt_elt_inn">
           <div className="ptt_hd">
-            <p>Vote 0: Choice Coin Reserve Address Distribution</p>
+            <p>Vote 1: Choice Charities</p>
           </div>
 
           <ul className="card_list">
@@ -420,7 +422,7 @@ const ElectionList = () => {
     <div className="ptt_elt">
       <div className="ptt_elt_inn">
         <div className="ptt_hd">
-          <p>Vote 0: Reserve Address Distribution</p>
+          <p>Vote 1: Choice Charities</p>
         </div>
 
         <ul className="card_list">
@@ -452,7 +454,7 @@ const ElectionList = () => {
                 <div className="card_elt_desc">{slug?.card_desc}</div>
 
                 <div className="voting_ends">
-                  Voting ends: December 29th, 2021, 5:00PM EST
+                  Voting ends: Janurary 27th, 2022, 5:00PM EST
                 </div>
 
                 <div className="results">

@@ -24,9 +24,7 @@ const Landing = () => {
             software development and community awareness.
             <br />
             <br />
-            Decentralized Decisions allows users to vote on proposals within the
-            Choice Coin DAO using their Choice tokens. The options with the most
-            Choice allocated to it will be the ones that are implemented.
+      Decentralized Decisions is an open source software platform for decentralized voting and governance. With over 75 contributors on GitHub, it is also the largest open source software project on the Algorand blockchain. The goal for Choice Coin is to help solve the decentralized governance problem by building the world’s best voting technology. Choice Coin is built, developed, and maintained by the Choice Coin DAO, a decentralized autonomous organization on the Algorand blockchain. Vote 1 is the second vote for the Choice Coin DAO.
           </p>
         </div>
         <div className="land_item1">
@@ -46,8 +44,8 @@ const Landing = () => {
               3. There are no limits on how much Choice you can use to vote.
             </li>
             <li>
-              4. Any Choice sent after the voting deadline, Wednesday December
-              29th at 5:00PM will not count, will not be rewarded, and will not
+              4. Any Choice sent after the voting deadline, Thursday Janurary
+              27th at 5:00PM will not count, will not be rewarded, and will not
               be returned.
             </li>
             <li> 5. All votes are final.</li>
@@ -56,14 +54,7 @@ const Landing = () => {
         <div className="land_item1">
           <h3>Rewards</h3>
           <p className="suby">
-            All rewards will be distributed by Wednesday January 5th at 5:00PM
-            EST. If up to 3,000,000.00 Choice is committed to vote, then the
-            reward pool will be 600,000.00 Choice. If up to 6,000,000.00 Choice
-            is committed to vote, then the reward pool will be 1,000,000.00
-            Choice. If over 6,000,000.00 Choice is committed to vote, then the
-            reward pool will be 1,400,000.00 Choice. The reward will be
-            distributed proportionally, based on the amount committed, to all
-            voters.
+        The rewards pool for Vote 1 will be tripled from Vote 0. If up to 3,000,000.00 Choice is committed to vote, then the reward pool will be 1,800,000.00 Choice. If up to 6,000,000.00 Choice is committed to vote, then the reward pool will be 3,000,000.00 Choice. If over 6,000,000.00 Choice is committed to vote, then the reward pool will be 4,200,000.00 Choice. The rewards will be distributed proportionally to all voters.
           </p>
         </div>
       </div>

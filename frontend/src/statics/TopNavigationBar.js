@@ -40,12 +40,8 @@ const TopNavigationBar = ({ darkTheme, NavLink }) => {
   const [balance, setBalance] = useState([]);
 
   const algodClient = new algosdk.Algodv2(
-    {
-      "X-API-Key": "Xy8NsXxfJg2cQ2YQ4pax6aLrTcj55jZ9mbsNCM30 ",
-    },
-    "https://testnet-algorand.api.purestake.io/ps2",
-    ""
-  );
+    '', 'https://api.algoexplorer.io', '');
+
 
   const walletAddress = localStorage.getItem("address");
   const addresses = localStorage.getItem("addresses")?.split(",");
