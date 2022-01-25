@@ -30,14 +30,13 @@ const ElectionList = () => {
   );
 
   const darkTheme = useSelector((state) => state.status.darkTheme);
+  const algod_token = "";
+  const algod_address = "https://algoexplorerapi.io";
+  const headers = "";
 
-  const algodClient = new algosdk.Algodv2(
-    ""
-  ,
-  "https://node.algoexplorerapi.io/v2",
-  ""
-);
 
+
+  const algodClient = new algosdk.Algodv2(algod_token,algod_address,headers);
   const walletType = localStorage.getItem("wallet-type");
   const isThereAddress = localStorage.getItem("address");
 
@@ -463,7 +462,7 @@ const ElectionList = () => {
                     <div className="optionButt">
                       <div className="optionButtDets">
                         <p>Option 1</p>
-                        <p>{address1} Choice</p>
+                        <p>0 Choice</p>
                       </div>
                       <div className="optRange">
                         <div
@@ -479,7 +478,7 @@ const ElectionList = () => {
                     <div className="optionButt">
                       <div className="optionButtDets">
                         <p>Option 2</p>
-                        <p>{address2} Choice</p>
+                        <p> 0 Choice</p>
                       </div>
                       <div className="optRange">
                         <div

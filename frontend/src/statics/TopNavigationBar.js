@@ -315,11 +315,6 @@ const TopNavigationBar = ({ darkTheme, NavLink }) => {
           borderTop: "1px solid var(--border-default)",
         }}
       >
-        <p style={{ opacity: "0.9" }}>
-          Amount committed to Governance:&nbsp;
-          {!!walletAddress && <GetCommittedAmount />} Choice
-        </p>
-
         {width > 850 && (
           <ul className="listNavBig">
             <li>
