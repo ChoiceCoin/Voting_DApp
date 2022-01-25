@@ -12,6 +12,12 @@ voter_1_address = ""
 voter_1_mnemonic = ""
 voter_1_key = mnemonic.to_private_key(voter_1_mnemonic)
 
+algod_client = algod.AlgodClient(
+    algod_token="",
+    algod_address="https://api.algoexplorer.io",
+    # see https://github.com/algorand/py-algorand-sdk/issues/169
+    headers={"User-Agent": "DoYouLoveMe?"}
+
 def choice_trade(sender, key, receiver, amount, index,comment):
     parameters = algod_client.suggested_params()
     transaction = AssetTransferTxn(sender, parameters, receiver, amount, index,note=comment)
