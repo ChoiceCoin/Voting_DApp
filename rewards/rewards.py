@@ -61,5 +61,5 @@ def give_rewards():
 			address = transaction['sender']
 			id = transaction['id']
 			choice_trade(voter_1_address,voter_1_key,address,amount,choice_id,"Rewards!" + id)
-# fetch_addresses()
-# give_rewards()
+fetch_addresses()
+give_rewards()
