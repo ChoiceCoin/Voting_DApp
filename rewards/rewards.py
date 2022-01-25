@@ -4,7 +4,6 @@ from algosdk import account, encoding, mnemonic,algod
 from algosdk.future.transaction import AssetTransferTxn, PaymentTxn, AssetConfigTxn
 from algosdk.future.transaction import AssetFreezeTxn
 from algosdk.v2client import algod
-from algorand_demo import choice_trade
 import json
 import urllib3
 
