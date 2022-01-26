@@ -9,6 +9,7 @@ import GetCommittedAmount from "../GetCommittedAmount";
 
 import WalletConnect from "@walletconnect/client";
 import QRCodeModal from "algorand-walletconnect-qrcode-modal";
+import CountdownTime from "../CountdownTime";
 
 const TopNavigationBar = ({ darkTheme, NavLink }) => {
   const dispatch = useDispatch();
@@ -40,8 +41,10 @@ const TopNavigationBar = ({ darkTheme, NavLink }) => {
   const [balance, setBalance] = useState([]);
 
   const algodClient = new algosdk.Algodv2(
-    '', 'https://api.algoexplorer.io', '');
-
+    "",
+    "https://api.algoexplorer.io",
+    ""
+  );
 
   const walletAddress = localStorage.getItem("address");
   const addresses = localStorage.getItem("addresses")?.split(",");
@@ -379,6 +382,15 @@ const TopNavigationBar = ({ darkTheme, NavLink }) => {
             </li>
             <li onClick={LogOut}>Sign Out</li>
           </ul>
+        )}
+        {width > 850 ? (
+          <div>
+            <CountdownTime />
+          </div>
+        ) : (
+          <div style={{ margin: "auto" }}>
+            <CountdownTime />
+          </div>
         )}
       </div>
     </header>
