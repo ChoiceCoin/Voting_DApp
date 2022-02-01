@@ -7,7 +7,7 @@ Credit to @FionnaChan for her contributions to the design.
 
 Research Paper on Decentralized Decisions: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3913316
 
-# Important updates
+# Important Updates
 
 Before running the dApp, you must run the following lines from the terminal to appropriately update the code.
 
