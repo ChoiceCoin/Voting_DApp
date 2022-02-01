@@ -24,6 +24,6 @@ To send out rewards, make sure that you are in the rewards directory. Download a
 
 # Votes
 
-The first vote session, Vote 0, will go live on December 27th. Blog on Vote 0: https://medium.com/@ChoiceCoin/choice-coin-governance-vote-0-b34147169429
+Vote 0: https://medium.com/@ChoiceCoin/choice-coin-governance-vote-0-b34147169429
 
-Next up, Vote 1: https://medium.com/@ChoiceCoin/choice-coin-governance-vote-1-e6763c31ae89
+Vote 1: https://medium.com/@ChoiceCoin/choice-coin-governance-vote-1-e6763c31ae89
