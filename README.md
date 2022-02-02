@@ -11,7 +11,7 @@ Research Paper on Decentralized Decisions: https://papers.ssrn.com/sol3/papers.c
 
 Before running the dApp, you must run the following lines from the terminal to appropriately update the code.
 
-npm install react-script@5.0.0
+npm install react-scripts@5.0.0
 
 npm update follow-redirects --depth 5
 
