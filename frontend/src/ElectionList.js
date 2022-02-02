@@ -34,9 +34,7 @@ const ElectionList = () => {
   const algod_address = "https://algoexplorerapi.io";
   const headers = "";
 
-
-
-  const algodClient = new algosdk.Algodv2(algod_token,algod_address,headers);
+  const algodClient = new algosdk.Algodv2(algod_token, algod_address, headers);
   const walletType = localStorage.getItem("wallet-type");
   const isThereAddress = localStorage.getItem("address");
 
@@ -104,7 +102,8 @@ const ElectionList = () => {
       if (myAccountInfo.assets.length === 0) {
         dispatch({
           type: "alert_modal",
-          alertContent: "You need to opt-in to Choice Coin in your Algorand Wallet.",
+          alertContent:
+            "You need to opt-in to Choice Coin in your Algorand Wallet.",
         });
         return;
       }
@@ -112,7 +111,8 @@ const ElectionList = () => {
       if (!containsChoice) {
         dispatch({
           type: "alert_modal",
-          alertContent: "You need to opt-in to Choice Coin in your Algorand Wallet.",
+          alertContent:
+            "You need to opt-in to Choice Coin in your Algorand Wallet.",
         });
         return;
       }
@@ -143,8 +143,7 @@ const ElectionList = () => {
       // alert success
       dispatch({
         type: "alert_modal",
-        alertContent:
-          "Your vote has been recorded.",
+        alertContent: "Your vote has been recorded.",
       });
       setTimeout(() => window.location.reload(), 1500);
     } catch (error) {
@@ -204,7 +203,8 @@ const ElectionList = () => {
         if (myAccountInfo.assets.length === 0) {
           dispatch({
             type: "alert_modal",
-            alertContent: "You need to opt-in to Choice Coin in your Algorand Wallet.",
+            alertContent:
+              "You need to opt-in to Choice Coin in your Algorand Wallet.",
           });
           return;
         }
@@ -212,7 +212,8 @@ const ElectionList = () => {
         if (!containsChoice) {
           dispatch({
             type: "alert_modal",
-            alertContent: "You need to opt-in to Choice Coin in your Algorand Wallet.",
+            alertContent:
+              "You need to opt-in to Choice Coin in your Algorand Wallet.",
           });
           return;
         }
@@ -249,8 +250,7 @@ const ElectionList = () => {
         // alert success
         dispatch({
           type: "alert_modal",
-          alertContent:
-            "Your vote has been recorded.",
+          alertContent: "Your vote has been recorded.",
         });
         setTimeout(() => window.location.reload(), 1500);
       }
@@ -342,8 +342,7 @@ const ElectionList = () => {
       // alert success
       dispatch({
         type: "alert_modal",
-        alertContent:
-          "Your vote has been recorded.",
+        alertContent: "Your vote has been recorded.",
       });
       setTimeout(() => window.location.reload(), 1500);
     } catch (error) {
