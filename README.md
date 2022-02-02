@@ -22,8 +22,13 @@ Make sure to have some Testnet Choice, either by creating a new asset or obtaini
 # Rewards Script
 To send out rewards, make sure that you are in the rewards directory. Download all the requirements in your local Python Instance through pip by running *pip install requirements.txt*. Replace the *voter_1_address* and the *voter_1_mneomnic* variables with the address and mneomonic of the wallet you are sending the rewards from. Then, visit algoexplorer: https://algoexplorer.io/api-dev/indexer-v2. Under *lookup*, try out the second option, fill all the parameters appropriately (The *max round* and *min round* variables can be used to restrict the time interval in which the rewards script works. The min round will be the round for the first Choice sent to the address for the vote, while the max round will be the round for the last Choice sent), and copy the url that is generated. Use this url for the blank string in the second part of the *main* variable in the *rewards.py* file. Finally, edit the *amount* variable in line *60* to match the rewards rate. Then, run the *rewards.py* file. This process will need to be repeated for each address you are sending rewards from.
 
+# Tests
+
+The code has been successfully tested on the Algorand TestNet and deployed to MainNet for two successful votes.
+
 # Votes
 
 Vote 0: https://medium.com/@ChoiceCoin/choice-coin-governance-vote-0-b34147169429
 
 Vote 1: https://medium.com/@ChoiceCoin/choice-coin-governance-vote-1-e6763c31ae89
+
