@@ -1,0 +1,7 @@
+//Replace the "constants.js" with this in order to run on MainNet
+const ASSET_ID = 297995609;
+const ADDRESS_1 = "OYY5IUIX37LM4YTWZZLVO5E6RR3LDID7G5D7N2M7KUV5GSLX62VONE2SXE";
+const ADDRESS_2 = "DKA36POQMDGCLHZHGJCXYGGIUPZOCVSAC22SWDMLYES3XIOXVPTQFELGNQ";
+const URL = "https://choice-coin-api.herokuapp.com";
+const ELECTION_ID = "9c365976-8477-4ee8-a960-c0cdf8624bc";
+export { ASSET_ID, URL, ELECTION_ID, ADDRESS_1, ADDRESS_2 };
