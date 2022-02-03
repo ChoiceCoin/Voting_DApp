@@ -1,7 +1,8 @@
 
 # Tests On Voting_DApp
 
-* each folder have its ` __snapshots__` results, which is a form of a results after running `test` command
+* each folder have its ` __snapshots__` results, which is a form of a results after running `test` command.
+* `setUpTests.js` has the configuration and the enzyme-adapter enviornment before running.
 
 ## Technology Used
 
