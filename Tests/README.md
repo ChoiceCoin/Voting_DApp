@@ -2,7 +2,6 @@
 # Tests On Voting_DApp
 
 * each folder have its snap shots results
-* All test codes are found alongside the javascript file having (.test.js) so it can be easily detected by `react-app/jest` testing library
 
 ## Technology Used
 
