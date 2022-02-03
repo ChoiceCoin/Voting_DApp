@@ -24,7 +24,7 @@ To send out rewards, make sure that you are in the rewards directory. Download a
 
 # Tests
 
-The code has been successfully tested on the Algorand TestNet and deployed to MainNet for two successful votes.
+The code has been successfully tested on the Algorand TestNet and deployed to MainNet for two successful votes. The Tests folder also contains data relating to tests of the code in this repository.
 
 # Votes
 
