@@ -1,7 +1,7 @@
 
 # Tests On Voting_DApp
 
-* each folder have its snap shots results
+* each folder have its ` __snapshots__` results, which is a form of a results after running `test` command
 
 ## Technology Used
 
@@ -22,10 +22,10 @@
 ```
   $ git clone https://github.com/ChoiceCoin/Voting_DApp.git
 ```
-* go into the `test` directory
+* go into the `Tests` directory
 
 ```
- $ cd test
+ $ cd Tests
 ```
 * install voting Dapp dependencies with
 
