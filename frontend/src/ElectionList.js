@@ -60,7 +60,7 @@ const ElectionList = () => {
       description: "Lorem ipsum",
       is_finished: false,
       is_started: true,
-      process_image: "https://i.postimg.cc/90XSyrjH/choice.png",
+      process_image: "https://i.postimg.cc/pXn0NRzL/logo.gif",
       slug: "is-choice-coin-the-best-b0c7db",
       title: "Choice Charities",
       wallet: {
