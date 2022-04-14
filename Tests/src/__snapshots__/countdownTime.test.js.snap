@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test On CountdownTime.js expects to render countdown component 1`] = `ShallowWrapper {}`;
+
+exports[`Test On CountdownTime.js should match the snapshot 1`] = `"<div><h1><span>Voting Process has ended!</span></h1></div>"`;
+
+exports[`Test On Home.js expects to render Home component 1`] = `ShallowWrapper {}`;
+
+exports[`Test On Home.js should match the snapshot 1`] = `"<div><h1><span>Voting Process has ended!</span></h1></div>"`;

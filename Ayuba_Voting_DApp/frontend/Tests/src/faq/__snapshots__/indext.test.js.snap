@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test on Faq component expects to render Faq component 1`] = `ShallowWrapper {}`;
+
+exports[`test on ScrollText component expects to render ScrollTextLand component 1`] = `ShallowWrapper {}`;
