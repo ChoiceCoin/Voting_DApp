@@ -54,17 +54,17 @@ const ElectionList = () => {
         },
       ],
       card_desc:
-        "This Issue addresses Choice Charities, an initiative focused on charitable contributions from the DAO. This Issue has two options.",
+        "Issue Description",
       choice_per_vote: 1,
-      created_at: "2021-12-08T10:32:15.878473",
+      created_at: "",
       description: "Lorem ipsum",
       is_finished: false,
       is_started: true,
-      process_image: "https://i.postimg.cc/pXn0NRzL/logo.gif",
-      slug: "is-choice-coin-the-best-b0c7db",
-      title: "Choice Charities",
+      process_image: "",
+      slug: "",
+      title: "Vote",
       wallet: {
-        address: "NX4T2FTIGNPVPSMEXJFMMKD46O4HRCPN25BDHOUW2SWXANZPQBZEDYKDVE",
+        address: "",
       },
     },
   ];
