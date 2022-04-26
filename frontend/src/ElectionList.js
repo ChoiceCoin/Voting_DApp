@@ -42,15 +42,15 @@ const ElectionList = () => {
     {
       candidates: [
         {
-          address: "JADVKUYQ72Z3LNDNQ3VFTXGAG6PPPQWN3QPI6CQTF3G4DVNP3TWJAI5UPI",
+          address: "",
           image: "",
-          name: "Option 1: The Choice Coin DAO will donate 15,000.00 Choice to Chess in Slums and Beyond Compass. The Choice Coin DAO will donate 25,000.00 Choice to Future Hopes International and Fearless Drive Foundation.",
+          name: "Option 1",
         },
 
         {
-          address: "M2VNOIOSE4KQ25XXFP3EQHUAQWINOEKY6HURCYUO2I6OJUQH3DAAZLGSPY",
+          address: "",
           image: "",
-          name: "Option 2: The Choice Coin DAO will donate 25,000.00 Choice to Chess in Slums and Beyond Compass. The Choice Coin DAO will donate 15,000.00 Choice to Future Hopes International and Fearless Drive Foundation.",
+          name: "Option 2",
         },
       ],
       card_desc:
